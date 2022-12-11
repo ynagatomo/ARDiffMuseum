@@ -14,6 +14,9 @@ And you can run the app on Mac, building as a Designed for iPad app.
 
 This Xcode project uses the `Apple/ml-stable-diffusion` Swift Package.
 
+- Apple/ml-stable-diffusion Swift Package/Library
+- SwiftUI, ARKit, RealityKit
+
 This project does not contain the CoreML models of Stable Diffusion v2 (SD2).
 You need to make them converting the PyTorch SD2 models using Apple converter tools.
 You can find the instructions of converting models in Apple's repo on GitHub.
@@ -41,6 +44,12 @@ to your Xcode project. Please refer to it.
 
 ![Image](images/gif1_640.gif)
 
+## UI
+
+This project provides a minimal UI. Feel free to extend it as you like.
+
+![Image](images/ui_960.jpg)
+
 ## Consideration
 
 ### MPS internal error
@@ -55,6 +64,8 @@ In action on iPad: image generation => AR display
 ## References
 
 - Apple Swift Package / ml-stable-diffusion: https://github.com/apple/ml-stable-diffusion
+- Stable Diffusion with Core ML on Apple Silicon, Apple Dec 2022: https://machinelearning.apple.com/research/stable-diffusion-coreml-apple-silicon
+- Deploying Transformers on the Apple Neural Engine, Apple June 2022: https://machinelearning.apple.com/research/neural-engine-transformers
 - Hugging Face Hub - stabilityai/stable-diffusion-2: https://huggingface.co/stabilityai/stable-diffusion-2
 
 ![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)
