@@ -96,7 +96,8 @@ struct ImgGenView: View {
                         })
                         .buttonStyle(.borderedProminent)
                         .disabled(ProcessInfo.processInfo.isiOSAppOnMac
-                                  || !imageExists)
+                                  || !imageExists
+                                  || !isGeneratorIdle)
                     }
                 }
                 .padding(24)
@@ -157,6 +158,9 @@ struct ImgGenView: View {
     }
 
     private func generate() {
+        // imageGenerator.removeSDPipeline()
+
+        // Generate images
         let param = ImageGenerator.GenerationParameter(
                             prompt: genParameter.prompt,
                             seed: genParameter.randomSeed ? Int.random(in: 0...999)

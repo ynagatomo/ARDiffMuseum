@@ -37,6 +37,10 @@ final class ImageGenerator: NSObject, ObservableObject {
     private var savingImageCount = 0
     private var savedImageCount = 0
 
+    //    func removeSDPipeline() {
+    //        sdPipeline = nil    // to reduce memory consumption :(
+    //    }
+
     private func setState(_ state: GenerationState) { // for actor isolation
         generationState = state
     }
@@ -123,10 +127,10 @@ extension ImageGenerator {
         debugLog("IG: Progress: step / stepCount = \(progress.step) / \(progress.stepCount)")
 
         let generatedImages = GeneratedImages(parameter: GenerationParameter(prompt: progress.prompt,
-                                                                             seed: 0,
-                                                                             stepCount: progress.stepCount,
-                                                                             imageCount: progress.currentImages.count,
-                                                                             disableSafety: progress.isSafetyEnabled),
+                                                             seed: 0,
+                                                             stepCount: progress.stepCount,
+                                                             imageCount: progress.currentImages.count,
+                                                             disableSafety: progress.isSafetyEnabled),
                                               images: progress.currentImages.compactMap {
             if let cgImage = $0 {
                 return UIImage(cgImage: cgImage)

@@ -164,7 +164,7 @@ extension ARViewController {
         assert(pictureFrameIndex >= 0
                && pictureFrameIndex < AppConstant.pictureFrameSpecs.count)
 
-        return AssetManager.share.loadModelEntity(of:
+         return AssetManager.share.loadModelEntity(of:
                                        AppConstant.pictureFrameSpecs[frameIndex].modelName)
     }
 

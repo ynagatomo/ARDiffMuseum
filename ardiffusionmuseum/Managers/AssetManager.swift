@@ -9,7 +9,6 @@ import RealityKit
 
 final class AssetManager {
     static let share = AssetManager()
-
     var modelEntities: [String: ModelEntity] = [:]
 
     private init() { }
