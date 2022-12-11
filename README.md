@@ -20,12 +20,20 @@ You can find the instructions of converting models in Apple's repo on GitHub.
 
 - Apple/ml-stable-diffusion repo: https://github.com/apple/ml-stable-diffusion
 
-And I explain how to add the models to the Xcode project in another GitHub Repository's Readme.
-Please check that if necessary.
+There is a Readme in another GitHub Repository that explains how to add Stable Diffusion CoreML models
+to your Xcode project. Please refer to it.
 
 - Image Generator with Stable Diffusion v2: https://github.com/ynagatomo/ImgGenSD2
 
 ## Features
+
+1. image generation using Stable Diffusion v2 on device
+1. showing generating images step by step
+1. saving generated images in Photo Library
+1. displaying generated images on the wall in AR
+1. automatic switching of displayed images at regular intervals
+1. automatic enlargement according to viewing distance (Large projection on outdoor walls)
+1. built-in sample images
 
 ![Image](images/ss1_1280.jpg)
 
