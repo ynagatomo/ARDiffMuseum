@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA3FBC3B29417FA6000F5005 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3A29417FA5000F5005 /* AppConstant.swift */; };
+		BA3FBC3D29419E24000F5005 /* Bundle+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3C29419E24000F5005 /* Bundle+extensions.swift */; };
+		BA3FBC402941DA4C000F5005 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3F2941DA4C000F5005 /* ImageGenerator.swift */; };
+		BAEF6FDF294560F400320FCC /* frame1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAEF6FDE294560F400320FCC /* frame1.usdz */; };
+		BAEF6FE1294560FA00320FCC /* frame2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAEF6FE0294560FA00320FCC /* frame2.usdz */; };
+		BAEF6FE42945BCF700320FCC /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FE32945BCF700320FCC /* AssetManager.swift */; };
+		BAEF6FE62945BE7700320FCC /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = BAEF6FE52945BE7700320FCC /* CoreMLModels */; };
+		BAEF6FE92945BF7A00320FCC /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = BAEF6FE82945BF7A00320FCC /* StableDiffusion */; };
+		BAEF6FEB2945F7E700320FCC /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FEA2945F7E700320FCC /* StatusView.swift */; };
+		BAEF6FED2945F8BF00320FCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FEC2945F8BF00320FCC /* SettingsView.swift */; };
+		BAEF6FEF2945FB4700320FCC /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FEE2945FB4700320FCC /* ParameterView.swift */; };
+		BAEF6FF12945FC7900320FCC /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FF02945FC7900320FCC /* ImageListView.swift */; };
+		BAFD092D293F3757003B0D9D /* ardiffusionmuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD092C293F3757003B0D9D /* ardiffusionmuseumApp.swift */; };
+		BAFD0931293F3758003B0D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFD0930293F3758003B0D9D /* Assets.xcassets */; };
+		BAFD0934293F3758003B0D9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAFD0933293F3758003B0D9D /* Preview Assets.xcassets */; };
+		BAFD0942293F42C7003B0D9D /* ImgGenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD0941293F42C7003B0D9D /* ImgGenView.swift */; };
+		BAFD0944293F4394003B0D9D /* ARContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD0943293F4394003B0D9D /* ARContentView.swift */; };
+		BAFD0946293F4403003B0D9D /* ARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD0945293F4403003B0D9D /* ARContainerView.swift */; };
+		BAFD0948293F4428003B0D9D /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD0947293F4428003B0D9D /* ARViewController.swift */; };
+		BAFD094E293F44EC003B0D9D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFD094D293F44EC003B0D9D /* Log.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA3FBC3A29417FA5000F5005 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		BA3FBC3C29419E24000F5005 /* Bundle+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extensions.swift"; sourceTree = "<group>"; };
+		BA3FBC3F2941DA4C000F5005 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
+		BAEF6FDE294560F400320FCC /* frame1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = frame1.usdz; sourceTree = "<group>"; };
+		BAEF6FE0294560FA00320FCC /* frame2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = frame2.usdz; sourceTree = "<group>"; };
+		BAEF6FE32945BCF700320FCC /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		BAEF6FE52945BE7700320FCC /* CoreMLModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLModels; sourceTree = "<group>"; };
+		BAEF6FEA2945F7E700320FCC /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		BAEF6FEC2945F8BF00320FCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BAEF6FEE2945FB4700320FCC /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
+		BAEF6FF02945FC7900320FCC /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
+		BAFD0929293F3757003B0D9D /* ardiffusionmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ardiffusionmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFD092C293F3757003B0D9D /* ardiffusionmuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ardiffusionmuseumApp.swift; sourceTree = "<group>"; };
+		BAFD0930293F3758003B0D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAFD0933293F3758003B0D9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAFD093B293F3A5A003B0D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BAFD093C293F3EDA003B0D9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BAFD0941293F42C7003B0D9D /* ImgGenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgGenView.swift; sourceTree = "<group>"; };
+		BAFD0943293F4394003B0D9D /* ARContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContentView.swift; sourceTree = "<group>"; };
+		BAFD0945293F4403003B0D9D /* ARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContainerView.swift; sourceTree = "<group>"; };
+		BAFD0947293F4428003B0D9D /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		BAFD094D293F44EC003B0D9D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAFD0926293F3757003B0D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEF6FE92945BF7A00320FCC /* StableDiffusion in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA396D152940517D00FA8260 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF6FDE294560F400320FCC /* frame1.usdz */,
+				BAEF6FE0294560FA00320FCC /* frame2.usdz */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BA3FBC3E2941DA31000F5005 /* ImageGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				BA3FBC3F2941DA4C000F5005 /* ImageGenerator.swift */,
+			);
+			path = ImageGenerator;
+			sourceTree = "<group>";
+		};
+		BAEF6FE22945BCE100320FCC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF6FE32945BCF700320FCC /* AssetManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BAFD0920293F3757003B0D9D = {
+			isa = PBXGroup;
+			children = (
+				BAFD093C293F3EDA003B0D9D /* README.md */,
+				BAFD092B293F3757003B0D9D /* ardiffusionmuseum */,
+				BAFD092A293F3757003B0D9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAFD092A293F3757003B0D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD0929293F3757003B0D9D /* ardiffusionmuseum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAFD092B293F3757003B0D9D /* ardiffusionmuseum */ = {
+			isa = PBXGroup;
+			children = (
+				BA396D152940517D00FA8260 /* Assets */,
+				BAEF6FE52945BE7700320FCC /* CoreMLModels */,
+				BAFD093E293F4248003B0D9D /* App */,
+				BAEF6FE22945BCE100320FCC /* Managers */,
+				BA3FBC3E2941DA31000F5005 /* ImageGenerator */,
+				BAFD093D293F420F003B0D9D /* Views */,
+				BAFD094C293F44C3003B0D9D /* Utilities */,
+				BAFD093B293F3A5A003B0D9D /* Info.plist */,
+				BAFD0930293F3758003B0D9D /* Assets.xcassets */,
+				BAFD0932293F3758003B0D9D /* Preview Content */,
+			);
+			path = ardiffusionmuseum;
+			sourceTree = "<group>";
+		};
+		BAFD0932293F3758003B0D9D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD0933293F3758003B0D9D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAFD093D293F420F003B0D9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD093F293F4280003B0D9D /* ImgGen View */,
+				BAFD0940293F428F003B0D9D /* AR View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BAFD093E293F4248003B0D9D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD092C293F3757003B0D9D /* ardiffusionmuseumApp.swift */,
+				BA3FBC3A29417FA5000F5005 /* AppConstant.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BAFD093F293F4280003B0D9D /* ImgGen View */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD0941293F42C7003B0D9D /* ImgGenView.swift */,
+				BAEF6FEA2945F7E700320FCC /* StatusView.swift */,
+				BAEF6FF02945FC7900320FCC /* ImageListView.swift */,
+				BAEF6FEE2945FB4700320FCC /* ParameterView.swift */,
+				BAEF6FEC2945F8BF00320FCC /* SettingsView.swift */,
+			);
+			path = "ImgGen View";
+			sourceTree = "<group>";
+		};
+		BAFD0940293F428F003B0D9D /* AR View */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD0943293F4394003B0D9D /* ARContentView.swift */,
+				BAFD0945293F4403003B0D9D /* ARContainerView.swift */,
+				BAFD0947293F4428003B0D9D /* ARViewController.swift */,
+			);
+			path = "AR View";
+			sourceTree = "<group>";
+		};
+		BAFD094C293F44C3003B0D9D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BAFD094D293F44EC003B0D9D /* Log.swift */,
+				BA3FBC3C29419E24000F5005 /* Bundle+extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAFD0928293F3757003B0D9D /* ardiffusionmuseum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAFD0937293F3758003B0D9D /* Build configuration list for PBXNativeTarget "ardiffusionmuseum" */;
+			buildPhases = (
+				BAFD0925293F3757003B0D9D /* Sources */,
+				BAFD0926293F3757003B0D9D /* Frameworks */,
+				BAFD0927293F3757003B0D9D /* Resources */,
+				BAFD093A293F37D5003B0D9D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ardiffusionmuseum;
+			packageProductDependencies = (
+				BAEF6FE82945BF7A00320FCC /* StableDiffusion */,
+			);
+			productName = ardiffusionmuseum;
+			productReference = BAFD0929293F3757003B0D9D /* ardiffusionmuseum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAFD0921293F3757003B0D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					BAFD0928293F3757003B0D9D = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = BAFD0924293F3757003B0D9D /* Build configuration list for PBXProject "ardiffusionmuseum" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAFD0920293F3757003B0D9D;
+			packageReferences = (
+				BAEF6FE72945BF7A00320FCC /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+			);
+			productRefGroup = BAFD092A293F3757003B0D9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAFD0928293F3757003B0D9D /* ardiffusionmuseum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAFD0927293F3757003B0D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFD0934293F3758003B0D9D /* Preview Assets.xcassets in Resources */,
+				BAEF6FE62945BE7700320FCC /* CoreMLModels in Resources */,
+				BAFD0931293F3758003B0D9D /* Assets.xcassets in Resources */,
+				BAEF6FDF294560F400320FCC /* frame1.usdz in Resources */,
+				BAEF6FE1294560FA00320FCC /* frame2.usdz in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BAFD093A293F37D5003B0D9D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Adds support for Apple Silicon brew directory\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAFD0925293F3757003B0D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFD0944293F4394003B0D9D /* ARContentView.swift in Sources */,
+				BA3FBC402941DA4C000F5005 /* ImageGenerator.swift in Sources */,
+				BAEF6FEF2945FB4700320FCC /* ParameterView.swift in Sources */,
+				BAEF6FEB2945F7E700320FCC /* StatusView.swift in Sources */,
+				BAFD094E293F44EC003B0D9D /* Log.swift in Sources */,
+				BAFD0946293F4403003B0D9D /* ARContainerView.swift in Sources */,
+				BAFD092D293F3757003B0D9D /* ardiffusionmuseumApp.swift in Sources */,
+				BAFD0942293F42C7003B0D9D /* ImgGenView.swift in Sources */,
+				BAFD0948293F4428003B0D9D /* ARViewController.swift in Sources */,
+				BA3FBC3D29419E24000F5005 /* Bundle+extensions.swift in Sources */,
+				BAEF6FF12945FC7900320FCC /* ImageListView.swift in Sources */,
+				BAEF6FED2945F8BF00320FCC /* SettingsView.swift in Sources */,
+				BAEF6FE42945BCF700320FCC /* AssetManager.swift in Sources */,
+				BA3FBC3B29417FA6000F5005 /* AppConstant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BAFD0935293F3758003B0D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAFD0936293F3758003B0D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAFD0938293F3758003B0D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
+				DEVELOPMENT_TEAM = J5CY9Q9UP5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ardiffusionmuseum/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AR Diff Museum";
+				INFOPLIST_KEY_NSCameraUsageDescription = "AR requires a camera.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "The app will save images in the Photo Library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app will save images in the Photo Library.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atarayosd.ardiffusionmuseum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAFD0939293F3758003B0D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
+				DEVELOPMENT_TEAM = J5CY9Q9UP5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ardiffusionmuseum/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AR Diff Museum";
+				INFOPLIST_KEY_NSCameraUsageDescription = "AR requires a camera.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "The app will save images in the Photo Library.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app will save images in the Photo Library.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atarayosd.ardiffusionmuseum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAFD0924293F3757003B0D9D /* Build configuration list for PBXProject "ardiffusionmuseum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFD0935293F3758003B0D9D /* Debug */,
+				BAFD0936293F3758003B0D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAFD0937293F3758003B0D9D /* Build configuration list for PBXNativeTarget "ardiffusionmuseum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAFD0938293F3758003B0D9D /* Debug */,
+				BAFD0939293F3758003B0D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BAEF6FE72945BF7A00320FCC /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/ml-stable-diffusion#swift-requirements";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BAEF6FE82945BF7A00320FCC /* StableDiffusion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAEF6FE72945BF7A00320FCC /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			productName = StableDiffusion;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BAFD0921293F3757003B0D9D /* Project object */;
+}
