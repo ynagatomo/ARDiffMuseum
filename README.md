@@ -41,6 +41,17 @@ to your Xcode project. Please refer to it.
 
 ![Image](images/gif1_640.gif)
 
+## Consideration
+
+### MPS internal error
+
+- Currently, using CoreML Stable Diffusion Library and RealityKit API such as ModelEntity.load(name:)
+together often causes MPS internal errors.
+- As a workaround, the 3D model of the picture frame is replaced with a simple one now.
+
+In action on iPad: image generation => AR display
+![Image](images/ipad_960.jpg)
+
 ## References
 
 - Apple Swift Package / ml-stable-diffusion: https://github.com/apple/ml-stable-diffusion
