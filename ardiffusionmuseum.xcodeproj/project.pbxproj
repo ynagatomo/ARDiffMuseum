@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA01CAEF294CA04100C89D87 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = BA01CAEE294CA04100C89D87 /* StableDiffusion */; };
 		BA3FBC3B29417FA6000F5005 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3A29417FA5000F5005 /* AppConstant.swift */; };
 		BA3FBC3D29419E24000F5005 /* Bundle+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3C29419E24000F5005 /* Bundle+extensions.swift */; };
 		BA3FBC402941DA4C000F5005 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3F2941DA4C000F5005 /* ImageGenerator.swift */; };
@@ -14,7 +15,6 @@
 		BAEF6FE1294560FA00320FCC /* frame2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAEF6FE0294560FA00320FCC /* frame2.usdz */; };
 		BAEF6FE42945BCF700320FCC /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FE32945BCF700320FCC /* AssetManager.swift */; };
 		BAEF6FE62945BE7700320FCC /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = BAEF6FE52945BE7700320FCC /* CoreMLModels */; };
-		BAEF6FE92945BF7A00320FCC /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = BAEF6FE82945BF7A00320FCC /* StableDiffusion */; };
 		BAEF6FEB2945F7E700320FCC /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FEA2945F7E700320FCC /* StatusView.swift */; };
 		BAEF6FED2945F8BF00320FCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FEC2945F8BF00320FCC /* SettingsView.swift */; };
 		BAEF6FEF2945FB4700320FCC /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FEE2945FB4700320FCC /* ParameterView.swift */; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAEF6FE92945BF7A00320FCC /* StableDiffusion in Frameworks */,
+				BA01CAEF294CA04100C89D87 /* StableDiffusion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +200,7 @@
 			);
 			name = ardiffusionmuseum;
 			packageProductDependencies = (
-				BAEF6FE82945BF7A00320FCC /* StableDiffusion */,
+				BA01CAEE294CA04100C89D87 /* StableDiffusion */,
 			);
 			productName = ardiffusionmuseum;
 			productReference = BAFD0929293F3757003B0D9D /* ardiffusionmuseum.app */;
@@ -231,7 +231,7 @@
 			);
 			mainGroup = BAFD0920293F3757003B0D9D;
 			packageReferences = (
-				BAEF6FE72945BF7A00320FCC /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+				BA01CAED294CA04100C89D87 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
 			);
 			productRefGroup = BAFD092A293F3757003B0D9D /* Products */;
 			projectDirPath = "";
@@ -423,7 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
 				DEVELOPMENT_TEAM = J5CY9Q9UP5;
 				ENABLE_PREVIEWS = YES;
@@ -440,7 +440,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atarayosd.ardiffusionmuseum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -455,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
 				DEVELOPMENT_TEAM = J5CY9Q9UP5;
 				ENABLE_PREVIEWS = YES;
@@ -472,7 +472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atarayosd.ardiffusionmuseum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -505,9 +505,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BAEF6FE72945BF7A00320FCC /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+		BA01CAED294CA04100C89D87 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/ml-stable-diffusion#swift-requirements";
+			repositoryURL = "https://github.com/apple/ml-stable-diffusion";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -516,9 +516,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BAEF6FE82945BF7A00320FCC /* StableDiffusion */ = {
+		BA01CAEE294CA04100C89D87 /* StableDiffusion */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BAEF6FE72945BF7A00320FCC /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			package = BA01CAED294CA04100C89D87 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
 			productName = StableDiffusion;
 		};
 /* End XCSwiftPackageProductDependency section */

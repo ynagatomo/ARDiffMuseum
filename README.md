@@ -6,8 +6,8 @@ An iOS app that generates images using Stable Diffusion and displays them in AR.
 
 You can generate images specifying any prompt (text) and display them on the wall in AR.
 
-- macOS 13.1 or newer, Xcode 14.1 or newer
-- iPhone 12+ / iOS 16.2+, iPad Pro with M1/M2 / iPadOS 16.2+
+- macOS 13.1 or newer, Xcode 14.2 or newer
+- iPhone Pro 12+ / iOS 16.2+, iPad Pro with M1/M2 / iPadOS 16.2+
 
 You can run the app on above mobile devices.
 And you can run the app on Mac, building as a Designed for iPad app.
@@ -27,6 +27,13 @@ There is a Readme in another GitHub Repository that explains how to add Stable D
 to your Xcode project. Please refer to it.
 
 - Image Generator with Stable Diffusion v2: https://github.com/ynagatomo/ImgGenSD2
+
+## Change Log
+
+- [1.0.1 (2)] - 2022-12-16 `[Changed]`
+    - use apple/ml-stable-diffusion Swift Package v0.1.0.
+    - set `reduceMemory` option of `StableDiffusionPipeline(resource:)` to `true`.
+    - iPhone requirements was changed to iPhone Pro 12+.
 
 ## Features
 

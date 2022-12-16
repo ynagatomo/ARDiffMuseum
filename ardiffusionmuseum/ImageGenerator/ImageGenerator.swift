@@ -80,7 +80,8 @@ extension ImageGenerator {
                     let resourceURL = URL(fileURLWithPath: path)
 
                     debugLog("IG: creating StableDiffusionPipeline object... resosurceURL = \(resourceURL)")
-                    if let pipeline = try? StableDiffusionPipeline(resourcesAt: resourceURL) {
+                    if let pipeline = try? StableDiffusionPipeline(resourcesAt: resourceURL,
+                                                                   reduceMemory: true) {
                         await self.setPipeline(pipeline)
                     } else {
                         fatalError("IG: Fatal error: failed to create the Stable-Diffusion-Pipeline.")
