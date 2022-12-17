@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D8D3C8E294DF9EF00608B2C /* ardiffusionmuseum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ardiffusionmuseum.entitlements; sourceTree = "<group>"; };
 		BA3FBC3A29417FA5000F5005 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		BA3FBC3C29419E24000F5005 /* Bundle+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extensions.swift"; sourceTree = "<group>"; };
 		BA3FBC3F2941DA4C000F5005 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		BAFD092B293F3757003B0D9D /* ardiffusionmuseum */ = {
 			isa = PBXGroup;
 			children = (
+				5D8D3C8E294DF9EF00608B2C /* ardiffusionmuseum.entitlements */,
 				BA396D152940517D00FA8260 /* Assets */,
 				BAEF6FE52945BE7700320FCC /* CoreMLModels */,
 				BAFD093E293F4248003B0D9D /* App */,
@@ -422,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ardiffusionmuseum/ardiffusionmuseum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
@@ -454,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ardiffusionmuseum/ardiffusionmuseum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
