@@ -82,8 +82,9 @@ extension ImageGenerator {
                     let resourceURL = URL(fileURLWithPath: path)
 
                     let config = MLModelConfiguration()
-                    config.computeUnits = .cpuAndGPU
-
+                    if !ProcessInfo.processInfo.isiOSAppOnMac {
+                        config.computeUnits = .cpuAndGPU
+                    }
                     debugLog("IG: creating StableDiffusionPipeline object... resosurceURL = \(resourceURL)")
                     if let pipeline = try? StableDiffusionPipeline( resourcesAt: resourceURL,
                                                                     configuration: config, reduceMemory: true) {

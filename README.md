@@ -38,6 +38,7 @@ to your Xcode project. Please refer to it.
     make sure that you are using the App ID which are registered the capabilities,
     "Extended Virtual Address Space" and "Increased Memory Limit",
     at Developer - Identifiers site.
+    - not use the `.cpuAndGPU` config when running on macOS, otherwise it causes errors.
 
 - [1.0.1 (2)] - 2022-12-16 `[Changed]`
     - use apple/ml-stable-diffusion Swift Package v0.1.0.
