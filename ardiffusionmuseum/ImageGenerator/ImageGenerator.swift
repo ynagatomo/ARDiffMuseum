@@ -86,8 +86,12 @@ extension ImageGenerator {
                         config.computeUnits = .cpuAndGPU
                     }
                     debugLog("IG: creating StableDiffusionPipeline object... resosurceURL = \(resourceURL)")
+
+                    // reduceMemory option was added at v0.1.0
+                    // On iOS, the reduceMemory option should be set to true
+                    let reduceMemory = ProcessInfo.processInfo.isiOSAppOnMac ? false : true
                     if let pipeline = try? StableDiffusionPipeline( resourcesAt: resourceURL,
-                                                                    configuration: config, reduceMemory: true) {
+                                                                    configuration: config, reduceMemory: reduceMemory) {
                         await self.setPipeline(pipeline)
                     } else {
                         fatalError("IG: Fatal error: failed to create the Stable-Diffusion-Pipeline.")
