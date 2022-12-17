@@ -29,6 +29,15 @@ to your Xcode project. Please refer to it.
 - Image Generator with Stable Diffusion v2: https://github.com/ynagatomo/ImgGenSD2
 
 ## Change Log
+- [1.0.2 (3)] - 2022-12-18 `[Merged]`
+    - merged the PR by Sergey Dikarev. It uses the configuration, `MLModelConfiguration.computeUnits = .cpuAndGPU`,
+    when creating a StableDiffusionPipeline. This configuration is suitable for mobile devices.
+    And it adds two entitlements, `Extended Virtual Addressing` and `Increased Memory Limit`.
+    They are suitable for an execution on iPhone.
+    - if you encounter signing and capability errors for the entitlements,
+    make sure that you are using the App ID which are registered the capabilities,
+    "Extended Virtual Address Space" and "Increased Memory Limit",
+    at Developer - Identifiers site.
 
 - [1.0.1 (2)] - 2022-12-16 `[Changed]`
     - use apple/ml-stable-diffusion Swift Package v0.1.0.
@@ -67,6 +76,15 @@ together often causes MPS internal errors.
 
 In action on iPad: image generation => AR display
 ![Image](images/ipad_960.jpg)
+
+## Related apps
+
+There are related app's repo on GitHub.
+
+- Img Gen SD2: https://github.com/ynagatomo/ImgGenSD2
+- AR Wall Picture: https://github.com/ynagatomo/ARWallPicture
+
+![Image](images/relatedapps.jpg)
 
 ## References
 

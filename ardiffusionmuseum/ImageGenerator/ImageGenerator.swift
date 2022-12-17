@@ -62,6 +62,7 @@ final class ImageGenerator: NSObject, ObservableObject {
 // MARK: - Stable Diffusion
 
 extension ImageGenerator {
+    // swiftlint:disable function_body_length
     func generateImages(of param: GenerationParameter, enableStableDiffusion: Bool) {
         guard generationState == .idle else { return }
 
@@ -82,9 +83,10 @@ extension ImageGenerator {
 
                     let config = MLModelConfiguration()
                     config.computeUnits = .cpuAndGPU
-                    
+
                     debugLog("IG: creating StableDiffusionPipeline object... resosurceURL = \(resourceURL)")
-                    if let pipeline = try? StableDiffusionPipeline( resourcesAt: resourceURL, configuration: config, reduceMemory: true) {
+                    if let pipeline = try? StableDiffusionPipeline( resourcesAt: resourceURL,
+                                                                    configuration: config, reduceMemory: true) {
                         await self.setPipeline(pipeline)
                     } else {
                         fatalError("IG: Fatal error: failed to create the Stable-Diffusion-Pipeline.")
