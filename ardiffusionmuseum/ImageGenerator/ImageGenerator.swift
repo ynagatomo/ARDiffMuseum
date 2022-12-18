@@ -137,22 +137,28 @@ extension ImageGenerator {
     nonisolated func progressHandler(progress: StableDiffusionPipeline.Progress) -> Bool {
         debugLog("IG: Progress: step / stepCount = \(progress.step) / \(progress.stepCount)")
 
-        let generatedImages = GeneratedImages(parameter: GenerationParameter(prompt: progress.prompt,
-                                                             seed: 0,
-                                                             stepCount: progress.stepCount,
-                                                             imageCount: progress.currentImages.count,
-                                                             disableSafety: progress.isSafetyEnabled),
-                                              images: progress.currentImages.compactMap {
-            if let cgImage = $0 {
-                return UIImage(cgImage: cgImage)
-            } else {
-                return nil
-            }
-        })
+        if ProcessInfo.processInfo.isiOSAppOnMac {
+            let generatedImages = GeneratedImages(parameter: GenerationParameter(prompt: progress.prompt,
+                                                 seed: 0,
+                                                 stepCount: progress.stepCount,
+                                                 imageCount: progress.currentImages.count,
+                                                 disableSafety: progress.isSafetyEnabled),
+                                                 images: progress.currentImages.compactMap {
+                if let cgImage = $0 {
+                    return UIImage(cgImage: cgImage)
+                } else {
+                    return nil
+                }
+            })
 
-        DispatchQueue.main.async {
-            self.setGeneratedImages(generatedImages)
-            self.setProgressStep(step: progress.step, stepCount: progress.stepCount)
+            DispatchQueue.main.async {
+                self.setGeneratedImages(generatedImages)
+                self.setProgressStep(step: progress.step, stepCount: progress.stepCount)
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.setProgressStep(step: progress.step, stepCount: progress.stepCount)
+            }
         }
 
         return true // continue
