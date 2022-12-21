@@ -52,6 +52,7 @@ struct ParameterView: View {
                 }
 
                 Group {
+                    Divider()
                     Text("Prompt")
                     TextField("Prompt", text: $param.prompt)
                         .textFieldStyle(.roundedBorder)
@@ -69,6 +70,15 @@ struct ParameterView: View {
                     .onChange(of: selectedPrompt) { newValue in
                         param.prompt = AppConstant.registeredPrompts[newValue]
                     }
+                }
+
+                Group {
+                    Divider()
+                    Text("Negative Prompt")
+                    TextField("Negative Prompt", text: $param.negativePrompt)
+                        .textFieldStyle(.roundedBorder)
+                        .foregroundColor(.indigo)
+                        .padding(.vertical, 8)
                 }
 
                 HStack {

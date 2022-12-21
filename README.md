@@ -29,7 +29,9 @@ to your Xcode project. Please refer to it.
 - Image Generator with Stable Diffusion v2: https://github.com/ynagatomo/ImgGenSD2
 
 ## Change Log
-- [1.0.2 (3)] - 2022-12-18 `[Merged]`
+- [1.1.0 (4)] - Dec 21, 2022 `[Added]`
+    - added the Negative Prompt. It requires the latest apple/ml-stable-diffusion Swift Package.
+- [1.0.2 (3)] - Dec 12, 2022 `[Merged]`
     - merged the PR by Sergey Dikarev. It uses the configuration, `MLModelConfiguration.computeUnits = .cpuAndGPU`,
     when creating a StableDiffusionPipeline. This configuration is suitable for mobile devices.
     And it adds two entitlements, `Extended Virtual Addressing` and `Increased Memory Limit`.

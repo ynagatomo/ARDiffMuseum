@@ -21,6 +21,11 @@ struct AppConstant {
         "a portrait of woman. realist abstract. key art. cyberpunk, blue and pink, intricate artwork. 8 k octane render, trending on artstation, very coherent symmetrical artwork. cinematic, hyperrealism, very detailed, iridescent accents"
     ]
 
+    static let defaultNegativePrompt =
+"""
+lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, multiple legs, malformation
+"""
+
     // Layout
     static let imageDisplayMaxWidth: CGFloat = 600
 

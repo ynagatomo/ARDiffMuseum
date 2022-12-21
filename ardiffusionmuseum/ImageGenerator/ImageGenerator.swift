@@ -13,6 +13,7 @@ import CoreML
 final class ImageGenerator: NSObject, ObservableObject {
     struct GenerationParameter {
         let prompt: String
+        let negativePrompt: String
         let seed: Int
         let stepCount: Int
         let imageCount: Int
@@ -106,9 +107,10 @@ extension ImageGenerator {
                         debugLog("IG: generating images...")
                         await self.setProgressStep(step: 0, stepCount: param.stepCount)
                         let cgImages = try sdPipeline.generateImages(prompt: param.prompt,
+                                                                     negativePrompt: param.negativePrompt,
                                                                      imageCount: param.imageCount,
                                                                      stepCount: param.stepCount,
-                                                                     seed: param.seed,
+                                                                     seed: UInt32(param.seed),
                                                                      disableSafety: param.disableSafety,
                                                                      progressHandler: self.progressHandler)
                         debugLog("IG: images were generated.")
@@ -126,7 +128,8 @@ extension ImageGenerator {
             }
         } else {
             // Stable Diffusion is disable. Create sample images.
-            let images = GeneratedImages(parameter: GenerationParameter(prompt: "", seed: 0, stepCount: 0,
+            let images = GeneratedImages(parameter: GenerationParameter(prompt: "", negativePrompt: "",
+                                                                        seed: 0, stepCount: 0,
                                                                         imageCount: AppConstant.sampleImageNames.count,
                                                                         disableSafety: false),
                                          images: AppConstant.sampleImageNames.map { UIImage(named: $0)! })
@@ -139,6 +142,7 @@ extension ImageGenerator {
 
         if ProcessInfo.processInfo.isiOSAppOnMac {
             let generatedImages = GeneratedImages(parameter: GenerationParameter(prompt: progress.prompt,
+                                                 negativePrompt: "unknow", // progress does not provide this now
                                                  seed: 0,
                                                  stepCount: progress.stepCount,
                                                  imageCount: progress.currentImages.count,
