@@ -23,6 +23,7 @@ struct ImgGenView: View {
     struct GenParameter {
         var prompt: String = ""
         var negativePrompt: String = AppConstant.defaultNegativePrompt
+        var guidanceScale: Float = 8.0
         var imageCount: Int = 1
         var stepCount: Double = 20
         var seed: Double = 100
@@ -165,6 +166,7 @@ struct ImgGenView: View {
         let param = ImageGenerator.GenerationParameter(
                             prompt: genParameter.prompt,
                             negativePrompt: genParameter.negativePrompt,
+                            guidanceScale: genParameter.guidanceScale,
                             seed: genParameter.randomSeed ? Int.random(in: 0...999)
                                                 : Int(genParameter.seed),
                             stepCount: Int(genParameter.stepCount),

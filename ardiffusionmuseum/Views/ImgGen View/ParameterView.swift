@@ -24,6 +24,18 @@ struct ParameterView: View {
                 }
 
                 HStack {
+                    Text("Guidance scale: \(param.guidanceScale, specifier: "%.1f")")
+
+                    Slider(value: $param.guidanceScale,
+                           in: 0.0...10.0,
+                           step: 0.5,
+                           minimumValueLabel: Text("0"),
+                           maximumValueLabel: Text("10")) {
+                        Text("label")
+                    }
+                }
+
+                HStack {
                     Text("Steps: \(Int(param.stepCount), specifier: "%4d")")
 
                     Slider(value: $param.stepCount,

@@ -14,6 +14,7 @@ final class ImageGenerator: NSObject, ObservableObject {
     struct GenerationParameter {
         let prompt: String
         let negativePrompt: String
+        let guidanceScale: Float
         let seed: Int
         let stepCount: Int
         let imageCount: Int
@@ -111,6 +112,7 @@ extension ImageGenerator {
                                                                      imageCount: param.imageCount,
                                                                      stepCount: param.stepCount,
                                                                      seed: UInt32(param.seed),
+                                                                     guidanceScale: param.guidanceScale,
                                                                      disableSafety: param.disableSafety,
                                                                      progressHandler: self.progressHandler)
                         debugLog("IG: images were generated.")
@@ -129,6 +131,7 @@ extension ImageGenerator {
         } else {
             // Stable Diffusion is disable. Create sample images.
             let images = GeneratedImages(parameter: GenerationParameter(prompt: "", negativePrompt: "",
+                                                                        guidanceScale: 0.0,
                                                                         seed: 0, stepCount: 0,
                                                                         imageCount: AppConstant.sampleImageNames.count,
                                                                         disableSafety: false),
@@ -143,6 +146,7 @@ extension ImageGenerator {
         if ProcessInfo.processInfo.isiOSAppOnMac {
             let generatedImages = GeneratedImages(parameter: GenerationParameter(prompt: progress.prompt,
                                                  negativePrompt: "unknow", // progress does not provide this now
+                                                 guidanceScale: 0.0, // progress does not provide this now
                                                  seed: 0,
                                                  stepCount: progress.stepCount,
                                                  imageCount: progress.currentImages.count,

@@ -29,6 +29,8 @@ to your Xcode project. Please refer to it.
 - Image Generator with Stable Diffusion v2: https://github.com/ynagatomo/ImgGenSD2
 
 ## Change Log
+- [1.2.0 (5)] - Dec 25, 2022 `[Added]`
+    - added the Guidance Scale. It requires the latest apple/ml-stable-diffusion Swift Package.
 - [1.1.0 (4)] - Dec 21, 2022 `[Added]`
     - added the Negative Prompt. It requires the latest apple/ml-stable-diffusion Swift Package.
 - [1.0.2 (3)] - Dec 12, 2022 `[Merged]`
