@@ -167,7 +167,7 @@ struct ImgGenView: View {
                             prompt: genParameter.prompt,
                             negativePrompt: genParameter.negativePrompt,
                             guidanceScale: genParameter.guidanceScale,
-                            seed: genParameter.randomSeed ? Int.random(in: 0...999)
+                            seed: genParameter.randomSeed ? Int.random(in: 0...4_294_967_295)
                                                 : Int(genParameter.seed),
                             stepCount: Int(genParameter.stepCount),
                             imageCount: genParameter.imageCount,

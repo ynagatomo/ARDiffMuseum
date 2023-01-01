@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA318C95296151A500E5917B /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = BA318C94296151A500E5917B /* CoreMLModels */; };
 		BA3FBC3B29417FA6000F5005 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3A29417FA5000F5005 /* AppConstant.swift */; };
 		BA3FBC3D29419E24000F5005 /* Bundle+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3C29419E24000F5005 /* Bundle+extensions.swift */; };
 		BA3FBC402941DA4C000F5005 /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3FBC3F2941DA4C000F5005 /* ImageGenerator.swift */; };
 		BA645DB62957EC020037BE76 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = BA645DB52957EC020037BE76 /* StableDiffusion */; };
-		BACE63D92953D9670038FD69 /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = BACE63D82953D9670038FD69 /* CoreMLModels */; };
 		BAEF6FDF294560F400320FCC /* frame1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAEF6FDE294560F400320FCC /* frame1.usdz */; };
 		BAEF6FE1294560FA00320FCC /* frame2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAEF6FE0294560FA00320FCC /* frame2.usdz */; };
 		BAEF6FE42945BCF700320FCC /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEF6FE32945BCF700320FCC /* AssetManager.swift */; };
@@ -31,10 +31,10 @@
 
 /* Begin PBXFileReference section */
 		5D8D3C8E294DF9EF00608B2C /* ardiffusionmuseum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ardiffusionmuseum.entitlements; sourceTree = "<group>"; };
+		BA318C94296151A500E5917B /* CoreMLModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLModels; sourceTree = "<group>"; };
 		BA3FBC3A29417FA5000F5005 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		BA3FBC3C29419E24000F5005 /* Bundle+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extensions.swift"; sourceTree = "<group>"; };
 		BA3FBC3F2941DA4C000F5005 /* ImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
-		BACE63D82953D9670038FD69 /* CoreMLModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLModels; sourceTree = "<group>"; };
 		BAEF6FDE294560F400320FCC /* frame1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = frame1.usdz; sourceTree = "<group>"; };
 		BAEF6FE0294560FA00320FCC /* frame2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = frame2.usdz; sourceTree = "<group>"; };
 		BAEF6FE32945BCF700320FCC /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5D8D3C8E294DF9EF00608B2C /* ardiffusionmuseum.entitlements */,
-				BACE63D82953D9670038FD69 /* CoreMLModels */,
+				BA318C94296151A500E5917B /* CoreMLModels */,
 				BA396D152940517D00FA8260 /* Assets */,
 				BAFD093E293F4248003B0D9D /* App */,
 				BAEF6FE22945BCE100320FCC /* Managers */,
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFD0934293F3758003B0D9D /* Preview Assets.xcassets in Resources */,
-				BACE63D92953D9670038FD69 /* CoreMLModels in Resources */,
+				BA318C95296151A500E5917B /* CoreMLModels in Resources */,
 				BAFD0931293F3758003B0D9D /* Assets.xcassets in Resources */,
 				BAEF6FDF294560F400320FCC /* frame1.usdz in Resources */,
 				BAEF6FE1294560FA00320FCC /* frame2.usdz in Resources */,
@@ -427,7 +427,7 @@
 				CODE_SIGN_ENTITLEMENTS = ardiffusionmuseum/ardiffusionmuseum.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
 				DEVELOPMENT_TEAM = J5CY9Q9UP5;
 				ENABLE_PREVIEWS = YES;
@@ -444,7 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atarayosd.arsdmuseum2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -462,7 +462,7 @@
 				CODE_SIGN_ENTITLEMENTS = ardiffusionmuseum/ardiffusionmuseum.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"ardiffusionmuseum/Preview Content\"";
 				DEVELOPMENT_TEAM = J5CY9Q9UP5;
 				ENABLE_PREVIEWS = YES;
@@ -479,7 +479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atarayosd.arsdmuseum2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

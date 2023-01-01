@@ -27,10 +27,10 @@ struct ParameterView: View {
                     Text("Guidance scale: \(param.guidanceScale, specifier: "%.1f")")
 
                     Slider(value: $param.guidanceScale,
-                           in: 0.0...10.0,
+                           in: 0.0...50.0,
                            step: 0.5,
                            minimumValueLabel: Text("0"),
-                           maximumValueLabel: Text("10")) {
+                           maximumValueLabel: Text("50")) {
                         Text("label")
                     }
                 }
@@ -43,22 +43,37 @@ struct ParameterView: View {
                            step: 1,
                            minimumValueLabel: Text("1"),
                            maximumValueLabel: Text("99")) {
-                        Text("label")
+                        Text("steps")
                     }
                 }
 
                 Toggle("Random seed", isOn: $param.randomSeed)
 
                 if !param.randomSeed {
-                    HStack {
-                        Text("Seed: \(Int(param.seed), specifier: "%4d")")
+                    VStack {
+//                        Text("Seed: \(Int(param.seed), specifier: "%10d")")
+                        Text("Seed: \(param.seed, specifier: "%.0f")")
+                        TextField("Seed", value: $param.seed,
+                                  formatter: NumberFormatter())
+                        .onSubmit {
+                            if param.seed < 0 {
+                                param.seed = 0
+                            } else if param.seed > Double(UInt32.max) {
+                                param.seed = Double(UInt32.max)
+                            } else {
+                                // do nothing
+                            }
+                        }
+                        .textFieldStyle(.roundedBorder)
+                        .foregroundColor(.indigo)
 
                         Slider(value: $param.seed,
-                               in: 0...1000,
+                               in: 0...4_294_967_295,
                                step: 1,
                                minimumValueLabel: Text("0"),
-                               maximumValueLabel: Text("999")) {
-                            Text("label")
+                               maximumValueLabel: Text("4B")
+                        ) {
+                            Text("seed")
                         }
                     }
                 }
