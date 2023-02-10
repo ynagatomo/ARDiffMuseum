@@ -107,14 +107,31 @@ extension ImageGenerator {
                     do {
                         debugLog("IG: generating images...")
                         await self.setProgressStep(step: 0, stepCount: param.stepCount)
-                        let cgImages = try sdPipeline.generateImages(prompt: param.prompt,
-                                                                     negativePrompt: param.negativePrompt,
-                                                                     imageCount: param.imageCount,
-                                                                     stepCount: param.stepCount,
-                                                                     seed: UInt32(param.seed),
-                                                                     guidanceScale: param.guidanceScale,
-                                                                     disableSafety: param.disableSafety,
+                        // [v1.3.0]
+                        // apple/ml-stable-diffusion v0.2.0 changed the generateImages() API
+                        // to generateImages(configuration:progressHandler:)
+                        //
+                        //    let cgImages = try sdPipeline.generateImages(prompt: param.prompt,
+                        //                                                 negativePrompt: param.negativePrompt,
+                        //                                                 imageCount: param.imageCount,
+                        //                                                 stepCount: param.stepCount,
+                        //                                                 seed: UInt32(param.seed),
+                        //                                                 guidanceScale: param.guidanceScale,
+                        //                                                 disableSafety: param.disableSafety,
+                        //                                                 progressHandler: self.progressHandler)
+
+                        // [Note] Mode: textToImage or imageToImage
+                        //        when startingImage != nil AND strength < 1.0, imageToImage mode is selected
+                        var configuration = StableDiffusionPipeline.Configuration(prompt: param.prompt)
+                        configuration.negativePrompt = param.negativePrompt
+                        configuration.imageCount = param.imageCount
+                        configuration.stepCount = param.stepCount
+                        configuration.seed = UInt32(param.seed)
+                        configuration.guidanceScale = param.guidanceScale
+                        configuration.disableSafety = param.disableSafety
+                        let cgImages = try sdPipeline.generateImages(configuration: configuration,
                                                                      progressHandler: self.progressHandler)
+
                         debugLog("IG: images were generated.")
                         let uiImages = cgImages.compactMap { image in
                             if let cgImage = image { return UIImage(cgImage: cgImage)

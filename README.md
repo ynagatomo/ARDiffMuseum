@@ -29,6 +29,10 @@ to your Xcode project. Please refer to it.
 - Image Generator with Stable Diffusion v2: https://github.com/ynagatomo/ImgGenSD2
 
 ## Change Log
+- [1.3.0 (7)] - Feb 10, 2023 `[Changed]`
+    - changed generateImages(of:enableStableDiffusion:) function to adapt to
+      apple/ml-stable-diffusion v0.2.0 API change on generateImages(configuration:progressHandler:)
+    - apple/ml-stable-diffusion v0.2.0 is required.
 - [1.2.1 (6)] - Jan 1, 2023 `[Changed]`
     - changed the Guidance Scale range from 0...10 to 0...50
     - changed the Seed range from 0...1000 to 0...UInt32.max and added a TextField for the Seed
